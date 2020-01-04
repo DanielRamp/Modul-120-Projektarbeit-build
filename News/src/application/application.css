@@ -1,0 +1,28 @@
+/* JavaFX CSS - Leave this comment until you have at least create one rule which uses -fx-Property */
+
+/*
+.big-check-box > .box {
+    -fx-padding: 1em 1em 1.5em 1.5em ;
+}
+.big-check-box > .box > .mark {
+    -fx-padding: 2.5em 2.5em 3em 3em; 
+}
+
+*/
+
+.big-check-box > .box {
+    -fx-padding: 0.83em 0.83em 1.25em 1.25em;
+    /* X / 0.2 = Yem */
+}
+.big-check-box > .box > .mark {
+    -fx-padding: 2.083em 2.083em 2.5em 2.5em;
+    /* X / 0.2 = Yem */ 
+}
+
+.round-button {
+	-fx-background-radius: 100;
+}
+
+.smallerPadding{
+	-fx-padding: 10;
+}

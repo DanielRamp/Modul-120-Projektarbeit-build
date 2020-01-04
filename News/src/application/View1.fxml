@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="900.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View1Controller">
+   <top>
+      <BorderPane BorderPane.alignment="CENTER">
+         <top>
+            <Label id="lblWelcome" fx:id="lblWelcome" accessibleText="Willkommen" text="Willkommen" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="74.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="20.0" />
+               </BorderPane.margin>
+            </Label>
+         </top>
+         <center>
+            <Label id="lblCategoryChoose" fx:id="lblCategoryChoose" accessibleText="Kategorien auswählen" text="Kategorien auswählen" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font name="System Italic" size="39.0" />
+               </font>
+               <BorderPane.margin>
+                  <Insets top="15.0" />
+               </BorderPane.margin>
+            </Label>
+         </center>
+      </BorderPane>
+   </top>
+   <center>
+      <GridPane alignment="CENTER" BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints halignment="CENTER" hgrow="SOMETIMES" />
+          <ColumnConstraints halignment="LEFT" hgrow="SOMETIMES" minWidth="80.0" prefWidth="500.0" />
+            <ColumnConstraints halignment="CENTER" minWidth="150.0" />
+        </columnConstraints>
+        <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+          <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <CheckBox fx:id="chbCategory1" mnemonicParsing="false" styleClass="big-check-box" GridPane.columnIndex="2" />
+            <CheckBox fx:id="chbCategory2" layoutX="776.0" layoutY="16.0" mnemonicParsing="false" styleClass="big-check-box" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+            <CheckBox fx:id="chbCategory3" layoutX="101.0" layoutY="16.0" mnemonicParsing="false" styleClass="big-check-box" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+            <CheckBox fx:id="chbCategory4" layoutX="776.0" layoutY="46.0" mnemonicParsing="false" styleClass="big-check-box" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+            <CheckBox fx:id="chbCategory5" layoutX="776.0" layoutY="251.0" mnemonicParsing="false" styleClass="big-check-box" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+            <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/baseline_notes_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" layoutX="53.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="1">
+               <image>
+                  <Image url="@img/baseline_local_hospital_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" layoutX="53.0" layoutY="110.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="2">
+               <image>
+                  <Image url="@img/baseline_language_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" layoutX="53.0" layoutY="210.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="3">
+               <image>
+                  <Image url="@img/baseline_healing_black_48dp.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true" GridPane.rowIndex="4">
+               <image>
+                  <Image url="@img/baseline_computer_black_48dp.png" />
+               </image>
+            </ImageView>
+            <Label text="Allgemein" GridPane.columnIndex="1">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+            <Label text="Inland" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+            <Label text="Ausland" GridPane.columnIndex="1" GridPane.rowIndex="2">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+            <Label text="Medizin" GridPane.columnIndex="1" GridPane.rowIndex="3">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+            <Label text="Technologie" GridPane.columnIndex="1" GridPane.rowIndex="4">
+               <font>
+                  <Font size="51.0" />
+               </font>
+            </Label>
+         </children>
+      </GridPane>
+   </center>
+   <bottom>
+      <BorderPane prefHeight="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+         <center>
+            <Button id="btnNext" fx:id="btnNext" accessibleText="Weiter" defaultButton="true" mnemonicParsing="false" onAction="#btnNextAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView id="imgNext" fx:id="imgNext" fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_arrow_forward_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </center>
+      </BorderPane>
+   </bottom>
+</BorderPane>

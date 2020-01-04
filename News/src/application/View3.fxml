@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane id="bdpOut" fx:id="bdpOut" prefHeight="900.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View3Controller">
+   <top>
+      <BorderPane id="bdpHeader" fx:id="bdpHeader" prefHeight="100.0" BorderPane.alignment="CENTER">
+         <center>
+            <Label id="lblPost" fx:id="lblPost" accessibleText="Feed" text="Neuer Post" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="62.0" />
+               </font>
+            </Label>
+         </center>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </BorderPane.margin>
+         <left>
+            <Button id="btnPrev" fx:id="btnPrev" accessibleText="Zurück Button" cancelButton="true" mnemonicParsing="false" onAction="#btnPrevAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </left>
+      </BorderPane>
+   </top>
+   <bottom>
+      <BorderPane id="bdpFooter" fx:id="bdpFooter" prefHeight="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+         <right>
+            <Button id="btnSendPost" fx:id="btnSendPost" accessibleText="Post hinzufügen Button" defaultButton="true" mnemonicParsing="false" onAction="#btnSendPostAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_add_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <BorderPane id="bdpContent" fx:id="bdpContent" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </BorderPane.margin>
+         <top>
+            <GridPane id="grpMeta" fx:id="grpMeta" hgap="15.0" vgap="15.0" BorderPane.alignment="CENTER">
+              <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" />
+                <ColumnConstraints hgrow="SOMETIMES" />
+              </columnConstraints>
+              <rowConstraints>
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+                <RowConstraints vgrow="SOMETIMES" />
+              </rowConstraints>
+               <children>
+                  <Label id="lblTitel" fx:id="lblTitel" accessibleText="Titel" text="Titel">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <TextField id="txfTitel" fx:id="txfTitel" accessibleText="Titel Textfeld" promptText="Post Titel" styleClass="smallerPadding" GridPane.columnIndex="1">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                     <GridPane.margin>
+                        <Insets />
+                     </GridPane.margin>
+                  </TextField>
+                  <Label id="lblCategories" fx:id="lblCategories" accessibleText="Titel" layoutX="10.0" layoutY="89.0" text="Kategorie(n)" GridPane.rowIndex="1">
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </Label>
+                  <MenuButton id="mnbCategories" fx:id="mnbCategories" accessibleText="Kategorien auswählen" maxWidth="1.7976931348623157E308" mnemonicParsing="false" text="Kategorie(n) auswählen" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <items>
+                      <MenuItem id="mnbCategoryChooseItem1" fx:id="mnbCategoryChooseItem1" mnemonicParsing="false" text="Auswahl Platzhalter 1" />
+                        <MenuItem id="mnbCategoryChooseItem2" fx:id="mnbCategoryChooseItem2" mnemonicParsing="false" text="Auswahl Platzhalter 2" />
+                    </items>
+                     <font>
+                        <Font size="48.0" />
+                     </font>
+                  </MenuButton>
+               </children>
+            </GridPane>
+         </top>
+         <center>
+            <TextArea id="txaContent" fx:id="txaContent" accessibleText="Textfeld Postinhalt" promptText="Post Inhalt" wrapText="true" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="30.0" />
+               </font>
+            </TextArea>
+         </center>
+      </BorderPane>
+   </center>
+</BorderPane>

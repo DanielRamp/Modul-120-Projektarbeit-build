@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="900.0" prefWidth="1200.0" stylesheets="@application.css" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.View2Controller">
+   <top>
+      <BorderPane prefHeight="100.0" BorderPane.alignment="CENTER">
+         <center>
+            <Label id="lblFeed" fx:id="lblFeed" accessibleText="Feed" text="Feed" textAlignment="CENTER" BorderPane.alignment="CENTER">
+               <font>
+                  <Font size="62.0" />
+               </font>
+            </Label>
+         </center>
+         <BorderPane.margin>
+            <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+         </BorderPane.margin>
+         <left>
+            <Button id="btnPrev" fx:id="btnPrev" accessibleText="Zurück Button" cancelButton="true" mnemonicParsing="false" onAction="#btnPrevAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_arrow_back_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </left>
+         <right>
+            <Button id="btnRefresh" fx:id="btnRefresh" accessibleText="Refresh Button" mnemonicParsing="false" onAction="#btnRefreshAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_refresh_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </right>
+      </BorderPane>
+   </top>
+   <bottom>
+      <BorderPane prefHeight="100.0" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+         </BorderPane.margin>
+         <left>
+            <Button id="btnClearPosts" fx:id="btnClearPosts" accessibleText="Posts löschen Button" mnemonicParsing="false" onAction="#btnClearPostsAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_clear_all_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </left>
+         <right>
+            <Button id="btnNewPost" fx:id="btnNewPost" accessibleText="Post hinzufügen Button" defaultButton="true" mnemonicParsing="false" onAction="#btnNewPostAction" styleClass="round-button" BorderPane.alignment="CENTER">
+               <graphic>
+                  <ImageView fitHeight="100.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@img/baseline_add_black_48dp.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </right>
+      </BorderPane>
+   </bottom>
+   <center>
+      <ListView id="lstPosts" fx:id="lstPosts" BorderPane.alignment="CENTER">
+         <BorderPane.margin>
+            <Insets left="20.0" right="20.0" />
+         </BorderPane.margin>
+      </ListView>
+   </center>
+</BorderPane>
